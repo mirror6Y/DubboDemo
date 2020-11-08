@@ -1,0 +1,17 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: dubbo
+
+  dubbo:
+    server: true
+    application:
+      name: consumer
+    registry:
+      address: zookeeper://127.0.0.1:2181
+#    protocol:
+#      name: dubbo
+#      port: 20880
+    scan: cn.mirror6.consumer.controller
