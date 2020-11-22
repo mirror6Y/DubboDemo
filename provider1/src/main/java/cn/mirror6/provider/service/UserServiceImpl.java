@@ -10,13 +10,14 @@ import org.springframework.stereotype.Component;
  * @author: mirror6
  * @create: 2020-11-08 21:58
  **/
-@Service(interfaceClass = IUserService.class)
+@Service
 @Component
 public class UserServiceImpl implements IUserService {
     @Override
     public User getUser(Long id) {
         User user = User.builder().id(id).name("test").build();
-        System.out.println("提供者id：" + id);
+        System.out.println("提供者id：" + user.getId());
+        System.out.println("提供者name：" + user.getName());
         return user;
     }
 }

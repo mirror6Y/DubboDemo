@@ -5,7 +5,6 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import javax.activation.CommandObject;
 
 /**
  * @description: user
@@ -20,7 +19,7 @@ public class UserController implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(iUserService.getUser(2L));
+        System.out.println(iUserService.getUser(2L).getName());
     }
 
 }
